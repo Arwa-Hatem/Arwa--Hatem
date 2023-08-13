@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task2/login_screen.dart';
 
 class OpeningScreen extends StatelessWidget {
   const OpeningScreen({super.key});
@@ -18,7 +19,7 @@ class OpeningScreen extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.3,
             ),
             Container(
-              padding: EdgeInsets.only(left: 110, bottom: 10),
+              padding: const EdgeInsets.only(left: 110, bottom: 10),
               child: Image.asset(
                 "images/quizz.png",
                 height: MediaQuery.of(context).size.height * 0.4,
@@ -49,7 +50,14 @@ class OpeningScreen extends StatelessWidget {
             Container(
               alignment: Alignment.bottomCenter,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const login_screen(),
+                    ),
+                  );
+                },
                 child: const Text(
                   "Start",
                   style: TextStyle(
@@ -58,7 +66,7 @@ class OpeningScreen extends StatelessWidget {
                 ),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green,
-                  padding: EdgeInsets.symmetric(horizontal: 150),
+                  padding: const EdgeInsets.symmetric(horizontal: 150),
                 ),
               ),
             )

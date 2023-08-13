@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:task2/category_screen.dart';
 import 'package:task2/login_screen.dart';
+import 'package:task2/opening_screen.dart';
+import 'package:task2/quiz_screen.dart';
 
-import 'opening_screen.dart';
+//import 'opening_screen.dart';
+//import 'category_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +22,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        //home: const OpeningScreen());
-        home: const login_screen());
+        // home: const OpeningScreen());
+        //home: const login_screen());
+        home: const OpeningScreen());
   }
 }
