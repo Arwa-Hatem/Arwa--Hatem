@@ -23,11 +23,12 @@ class score_screen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushAndRemoveUntil<void>(
                   context,
                   MaterialPageRoute<void>(
                     builder: (BuildContext context) => const OpeningScreen(),
                   ),
+                  (Route<dynamic> route) => false,
                 );
               },
               child: const Text(

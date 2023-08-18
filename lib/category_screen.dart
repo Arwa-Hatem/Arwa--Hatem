@@ -20,7 +20,7 @@ class CategoryScreen extends StatelessWidget {
             Expanded(
                 child: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute<void>(
                     builder: (BuildContext context) => quiz_screen(),
