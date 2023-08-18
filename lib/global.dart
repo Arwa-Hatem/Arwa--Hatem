@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 List data = [
   {
     "CategoryName": "Sport test",
-    "color": Colors.blue,
+    "color": Color.fromARGB(255, 51, 195, 118),
     "data": [
       {
         "question":
@@ -38,7 +38,7 @@ List data = [
   },
   {
     "CategoryName": "History test",
-    "color": Colors.red,
+    "color": Color.fromARGB(255, 95, 166, 126),
     "data": [
       {
         "question":
@@ -73,7 +73,7 @@ List data = [
   },
   {
     "CategoryName": "General test",
-    "color": Colors.yellow,
+    "color": Color.fromARGB(255, 40, 141, 74),
     "data": [
       {
         "question": "The study of sound is called?",
