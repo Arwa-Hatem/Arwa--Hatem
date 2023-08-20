@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-List data = [
+List<Map<String, dynamic>> database = [
   {
     "CategoryName": "Sport test",
     "color": Color.fromARGB(255, 51, 195, 118),
@@ -103,4 +103,83 @@ List data = [
       }
     ],
   },
+  {
+    "CategoryName": "Math test",
+    "color": Color.fromARGB(255, 51, 195, 118),
+    "data": [
+      {
+        "question": " What is three fifth of 100?",
+        "answers": [
+          {"ans": " 3", "score": 0},
+          {"ans": "5", "score": 0},
+          {"ans": "  20", "score": 0},
+          {"ans": " 60", "score": 1},
+        ]
+      },
+      {
+        "question": " What is the remainder of 21 divided by 7?",
+        "answers": [
+          {"ans": "3", "score": 0},
+          {"ans": "5", "score": 0},
+          {"ans": "1", "score": 0},
+          {"ans": "Non of these", "score": 1}
+        ],
+      },
+    ],
+  },
+  {
+    "CategoryName": "Physics test",
+    "color": Color.fromARGB(255, 51, 195, 118),
+    "data": [
+      {
+        "question": "Iron is attracted by magnets?",
+        "answers": [
+          {"ans": " True", "score": 1},
+          {"ans": "False", "score": 0},
+        ]
+      },
+      {
+        "question": "A person who studies physics is known as a?",
+        "answers": [
+          {"ans": "Physicist", "score": 1},
+          {"ans": "Chemist", "score": 0},
+          {"ans": "Scientist", "score": 0},
+        ],
+      },
+      {
+        "question": "What is the earth’s primary source of energy?",
+        "answers": [
+          {"ans": " Heat", "score": 0},
+          {"ans": " Electricity", "score": 0},
+          {"ans": "The Sun", "score": 1},
+          {"ans": " Solar System", "score": 0}
+        ],
+      }
+    ],
+  },
+  {
+    "CategoryName": "Chemistry test",
+    "color": Color.fromARGB(255, 51, 195, 118),
+    "data": [
+      {
+        "question": "What is the chemical symbol for gold?",
+        "answers": [
+          {"ans": " Au", "score": 1},
+          {"ans": "Ag", "score": 0},
+          {"ans": "  Al", "score": 0},
+          {"ans": " Fe", "score": 0},
+        ]
+      },
+      {
+        "question":
+            "Which gas is most commonly found in the Earth's atmosphere?",
+        "answers": [
+          {"ans": "Oxygen", "score": 0},
+          {"ans": "Nitrogen", "score": 1},
+          {"ans": "Hydrogen", "score": 0},
+        ],
+      },
+    ],
+  },
 ];
+TextEditingController usernameController = TextEditingController();

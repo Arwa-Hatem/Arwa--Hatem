@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:task2/global.dart';
 import 'package:task2/quiz_screen.dart';
 
-class CategoryScreen extends StatelessWidget {
-  CategoryScreen({super.key});
+class categoryscreen extends StatelessWidget {
+  categoryscreen({super.key});
 
-  List quizName = ["Sport Test", "History Test", "General Test"];
+  List quizName = [
+    "Sport Test",
+    "History Test",
+    "General Test",
+    "Math test",
+    "physics test",
+    "chemstry"
+  ];
   List quizColor = [
-    Color.fromARGB(255, 51, 195, 118),
     Color.fromARGB(255, 95, 166, 126),
-    Color.fromARGB(255, 40, 141, 74)
+    Color.fromARGB(255, 95, 166, 126),
+    Color.fromARGB(255, 95, 166, 126),
+    Color.fromARGB(255, 95, 166, 126),
+    Color.fromARGB(255, 95, 166, 126),
+    Color.fromARGB(255, 95, 166, 126),
   ];
 
   @override
@@ -16,19 +27,21 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          for (int i = 0; i < 3; i++)
+          for (int i = 0; i < 6; i++)
             Expanded(
                 child: GestureDetector(
               onTap: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => quiz_screen(),
+                    builder: (BuildContext context) => quiz_screen(
+                      categorymap: database[i],
+                    ),
                   ),
                 );
               },
               child: Container(
-                  margin: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(200)),
                     color: quizColor[i],
